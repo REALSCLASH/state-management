@@ -48,7 +48,7 @@ app.get("/secret", (req, res) => {
 
 app.post("/login", (req, res) => {
   if (username === req.body.username && password === req.body.password) {
-    req.session.logged = true;
+  req.session.logged = true;
     res.redirect("/secret");
   } else {
     req.session.logged = false;
@@ -57,3 +57,6 @@ app.post("/login", (req, res) => {
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+
+;
