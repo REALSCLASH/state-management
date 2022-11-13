@@ -52,11 +52,10 @@ app.post("/login", (req, res) => {
     res.redirect("/secret");
   } else {
     req.session.logged = false;
-    res.redirect("/form");
+  res.redirect("/form");
   }
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 
-;
